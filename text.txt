@@ -1,0 +1,212 @@
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
+
+.name {
+    flex: 2;
+}
+
+.name h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: -0.5rem;
+    color: var(--primary-color);
+    margin-left: 1rem;
+}
+
+.click {
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+    color: var(--primary-color);
+}
+
+.drop-Down {
+    flex: 1;
+    margin-top: 0.5rem;
+}
+
+.underline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--bg-color);
+    height: 0.25rem;
+    margin: 0 auto;
+    visibility: hidden;
+    width: 55.5%;
+}
+
+.list-container {
+    padding: 1rem;
+    /* margin: 0 9rem; */
+    background-color: var(--primary-color);
+    visibility: hidden;
+    width: 55.5%;
+    height: 99%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-container ul li {
+    list-style-type: none;
+    padding: 0.6rem;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.list-container ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.visible {
+    visibility: visible;
+    /* transition: 2s ease; */
+    animation-name: dropDown;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+.visible-underline {
+    visibility: visible;
+    animation-name: dropDown;
+}
+
+@keyframes dropDown {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    51% {
+        transform: rotateX(-20deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+@media screen and (min-width: 451px) {
+    .underline,
+    .list-container {
+        width: 73%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /*  .underline,
+    .list-container {
+        width: 45%;
+    } */
+    .list-container ul li a {
+        display: inline-block;
+        padding: auto;
+    }
+}
+
+
+<div class="main-nav">
+                <div class="name">
+                    <h1>MIRADE</h1>
+                </div>
+                <div class="drop-Down">
+
+                    <i class="fa-solid fa-bars click"></i>
+                </div>
+            </div>
+            <div class="nav-container">
+                <div class="underline visible-underline"></div>
+                <div class="list-container visible">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="About.html">ABOUT US</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="#">RESERVATION</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            /* .section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+} */
+
+
+/* }
+.slowFade {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.slowFade .slide img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    background: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(1.5) rotate(15deg);
+    -webkit-animation: slowFade 32s infinite;
+            animation: slowFade 32s infinite;
+}
+.slowFade .slide:nth-child(3) img {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+}
+.slowFade .slide:nth-child(2) img {
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+}
+.slowFade .slide:nth-child(1) img {
+    -webkit-animation-delay: 24s;
+            animation-delay: 24s;
+}
+@keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+} */
